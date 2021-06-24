@@ -1,0 +1,76 @@
+.koala_wechat_x_huoduan_hide_box {
+    border: 1px dashed #707070;
+    border-radius: 9px;
+    padding: 10px;
+    padding-left: 50px;
+    padding-right: 50px;
+    margin: 10px 0;
+    line-height: 200%;
+    color: #707070;
+    background-color: #ffffff;
+    overflow: hidden;
+    clear: both;
+}
+.koala_wechat_x_huoduan_hide_tip{
+    font-size: 14px;
+    font-weight: normal;
+    font-stretch: normal;
+    line-height: 19px;
+    letter-spacing: 0px;
+    color: #707070;
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+.koala_wechat_x_huoduan_hide_tip span{
+    color: #faad14;
+}
+.koala_wechat_x_wxpic {
+    width: 110px;
+    height: 110px;
+    margin-left: 20px;
+    display: inline;
+    border: none
+}
+
+.koala_wechat_x_verifycode {
+    border: none;
+    float: left;
+    width: 224px !important;
+    height: 32px;
+    line-height: 30px;
+    padding: 0 5px;
+    border: 1px solid #faad14;
+    -moz-border-radius: 0px;
+    -webkit-border-radius: 0px;
+    border-radius: 0px;
+}
+
+.koala_wechat_x_verifybtn {
+    border: none !important;
+    float: left !important;
+    width: 80px !important;
+    height: 32px !important;
+    line-height: 32px !important;
+    padding: 0 5px !important;
+    background-color: #faad14 !important;
+    text-align: center !important;
+    cursor: pointer !important;
+    color: #FFF !important;
+    -moz-border-radius: 0px !important;
+    font-size: 14px !important;
+    -webkit-border-radius: 0px !important;
+    border-radius: 0px !important;
+}
+
+.koala_wechat_x_hiddenTips{
+    border: 1px dashed #707070;
+    border-radius: 9px;
+    padding: 10px;
+    margin: 10px 0;
+    text-align: center;
+    line-height: 200%;
+    background-color: #ffffff;
+    overflow: hidden;
+    clear: both;
+    color: #999999;
+}
