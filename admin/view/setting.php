@@ -56,7 +56,7 @@ function koala_wechat_x_setting_page() {
 	<?php koala_wechat_x_setting_save(); ?>
 
     <div class="wrap">
-        <h1>WeChatX配置</h1>
+        <h1>WechatX插件设置</h1>
 
         <form method="post" novalidate="novalidate" enctype="multipart/form-data">
             <table class="form-table" role="presentation">

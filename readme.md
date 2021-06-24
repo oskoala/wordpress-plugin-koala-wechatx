@@ -1,10 +1,10 @@
-# 考拉开源 WordPress 必应壁纸插件
+# 考拉开源 WordPress 关注公众号查看隐藏内容 插件
 
-> 考拉开源必应壁纸插件主页：https://www.oskoala.com/wordpress-plugin-koala-bingwallpaper
+> 考拉开源必应壁纸插件主页：https://www.oskoala.com/wordpress-plugin-koala-wechatx
 
-> 插件预览地址：https://www.wuzhixiang.cn/index.php/bing/
+> 插件预览地址：https://www.wuzhixiang.cn/index.php/2021/06/24/wechatx/
 
-> github地址：https://github.com/oskoala/wordpress-plugin-koala-bingwallpaper
+> github地址：https://github.com/oskoala/wordpress-plugin-koala-wechatx
 
 ## 安装
 
@@ -17,40 +17,27 @@ github项目主页下载到插件压缩包。
 ## 配置
 
 ### 第一步：
-因项目需要定时采集图片信息所以需要配置定时任务
-
-Linux系统
-
-一、进入crontab 编辑页面
-```shell
-crontab -e
-```
-二、 在最下方添加一行 注意域名要换成自己的
-```
-* * * * * wget --output-document=/dev/null https://www.wuzhixiang.cn/wp-cron.php
-```
-
-Windows系统
-
-一、创建cron.bat文件填入如下信息  注意域名要换成自己的
-```shell
-powershell Invoke-WebRequest https://www.wuzhixiang.cn/wp-cron.php
-```
-二、配置计划任务 
-具体请参考：https://blog.csdn.net/xinpo66/article/details/81238982
+进入 设置 >> WechatX插件设置
 
 ### 第二步：
-添加必应壁纸页面
+依次填写各个配置项 点击保存更改完成配置
 
-首先确保插件已正常启动。
+![image](https://www.oskoala.com/uploads/images/202106/24/1624513414_519.png)
 
-WordPress 后台首页>>页面>>新建页面>>填写页面标题，选择页面模板【必应壁纸】>>点击发布按钮。
+### 第三步
+进入公众号后台设置关键词自动回复，关键词为配置项里‘回复以下内容获取验证码’的内容，回复内容为配置项‘自动回复的验证码’的内容
 
-注意：页面创建以后能看到页面的访问链接，链接可以自定义，该链接即为必应壁纸访问链接。
+## 使用
 
-## 插件信息
+### 第一步
+发布文章时选择 右上角的文本模式。
 
-一、图片存储在\wp-content\uploads\bing 按照年份月份划分文件夹。
+![image](https://www.oskoala.com/uploads/images/202106/24/1624512116_375.png)
+### 第二步
+正常编辑文章内容，在隐藏内容前后点击插入隐藏标签按钮插入隐藏标签。
 
-二、插件启动后自动创建数据表koala_bing_images用于保存插件产生的数据信息，插件卸载删除后数据库和图片文件不会自动删除，如需删除请手动处理[此处为了避免删除被不小心删除]。
+![image](https://www.oskoala.com/uploads/images/202106/24/1624512453_188.png)
 
+### 第三步
+查看文章，查看插件效果
+![image](https://www.oskoala.com/uploads/images/202106/24/1624513694_201.png)
