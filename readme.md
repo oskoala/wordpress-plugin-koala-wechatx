@@ -2,8 +2,6 @@
 
 > 考拉开源必应壁纸插件主页：https://www.oskoala.com/wordpress-plugin-koala-wechatx
 
-> 插件预览地址：https://www.wuzhixiang.cn/index.php/2021/06/24/wechatx/
-
 > github地址：https://github.com/oskoala/wordpress-plugin-koala-wechatx
 
 ## 安装
