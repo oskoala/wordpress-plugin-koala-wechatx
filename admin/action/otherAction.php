@@ -27,7 +27,9 @@ function koala_wechat_x_article_encryption( $content ) {
 			//print_r($hide_words);
 			$hide_words[0] = array_unique( $hide_words[0] );
 			for ( $i = 0; $i < count( $hide_words ); $i ++ ) {
-				$content = str_replace( $hide_words[0][ $i ], '<div class = "koala_wechat_x_hiddenTips">' . $hide_words[0][ $i ] . '</div>', $content );
+				if(isset($hide_words[0]) && isset($hide_words[0][$i])){
+    					$content = str_replace( $hide_words[0][ $i ], '<div class = "koala_wechat_x_hiddenTips">' . $hide_words[0][ $i ] . '</div>', $content );   
+			    	}
 			}
 		} else {
 			$qrcode = wp_upload_dir()['url'] . '/' . get_option( koala_wechat_x_official_account_img );
