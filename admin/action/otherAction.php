@@ -106,7 +106,9 @@ function koala_wechat_x_script() {
                         "verifycode": verifycode
                     }, function (data) {
                         if (data.success) {
-                            $("#post-" + id + " .entry-content").html(data.data.content);
+				
+                            window.location.reload();
+                            //$("#post-" + id + " .entry-content").html(data.data.content);
                         } else {
                             alert(data.data.msg);
                         }
