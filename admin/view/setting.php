@@ -10,7 +10,7 @@ function koala_wechat_x_setting() {
 
 function koala_wechat_x_setting_save() {
 
-	if ( sanitize_text_field( $_POST['submit'] ) ) {
+	if ( sanitize_text_field( $_POST['submit']  ?? "" ) ) {
 		$updated = true;
 		if ( sanitize_text_field( $_POST[ koala_wechat_x_official_account_name ] ) ) {
 			update_option( koala_wechat_x_official_account_name, sanitize_text_field( $_POST[ koala_wechat_x_official_account_name ] ) );
