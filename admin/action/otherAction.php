@@ -88,6 +88,8 @@ function koala_wechat_x_add_stylesheet_to_head() {
 
 function koala_wechat_x_script() {
 	?>
+    
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script>
         // jQuery.noConflict();    // 由于wordpress 添加了这一行，所以， $ 操作，会报错。
         (function ($) {
