@@ -3,7 +3,7 @@
 
 /**
  * Plugin Name: WechatX
- * Plugin URI: https://www.oskoala.com/wechatx
+ * Plugin URI: https://www.oskoala.com/wordpress-plugin-koala-wechatx
  * Description: 文章内容隐藏，关注公众号获取验证码查看
  * Version: 1.0.0
  * Author: 考拉开源
