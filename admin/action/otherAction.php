@@ -49,7 +49,8 @@ function koala_wechat_x_article_encryption( $content ) {
     }
 </style>
 <div class="koala_wechat_x_huoduan_hide_box">
-    <span style="font-size:18px;">文中部分内容已被作者隐藏，关注“萌芽科技”公众号获取验证码后可浏览隐藏内容</span>
+    <span style="font-size:18px;">文中部分内容已被作者隐藏，关注“
+    $koala_wechat_x_official_account_name ”公众号获取验证码后可浏览隐藏内容</span>
     <div class="">
         <img class="koala_wechat_x_wxpic" align="right" src="$qrcode" alt="">
         <div class="koala_wechat_x_huoduan_hide_tip">
