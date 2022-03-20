@@ -54,7 +54,7 @@ function koala_wechat_x_article_encryption( $content ) {
     <span style="font-size:18px;">文中部分内容已被作者隐藏，关注“
     $koala_wechat_x_official_account_name ”公众号获取验证码后可浏览隐藏内容</span>
      <div style="display:flex; flex-direction:row;">
-        <div>
+        <div style="flex:1">
              <div class="koala_wechat_x_huoduan_hide_tip">
                 验证码获取方式：关注“<span>$koala_wechat_x_official_account_name</span>”公众号后，回复“<span>$koala_wechat_x_official_account_keyword</span>”。
             </div>
