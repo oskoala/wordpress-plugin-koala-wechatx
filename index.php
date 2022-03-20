@@ -17,6 +17,8 @@
  * 函数命名规则
  * 函数名称： koala_wechat_x_{function_name}
  */
+error_reporting(0);
+
 require_once "admin/index.php";
 $plugins_url = plugins_url( '', __FILE__ );
 date_default_timezone_set( "PRC" );
