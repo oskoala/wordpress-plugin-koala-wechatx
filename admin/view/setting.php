@@ -165,7 +165,4 @@ function koala_wechat_x_setting_page() {
 	<?php
 }
 
-?>
-
-
 
