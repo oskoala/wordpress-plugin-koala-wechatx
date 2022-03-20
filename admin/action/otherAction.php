@@ -58,16 +58,16 @@ function koala_wechat_x_article_encryption( $content ) {
              <div class="koala_wechat_x_huoduan_hide_tip">
                 验证码获取方式：关注“<span>$koala_wechat_x_official_account_name</span>”公众号后，回复“<span>$koala_wechat_x_official_account_keyword</span>”。
             </div>
-            <form method="post" style="margin:10px 0;">
-                <span class="koala_wechat_x_yzts" style="font-size:18px;float:left;">验证码：</span>
-                <input class="koala_wechat_x_verifycode" name="verifycode" id="koala_wechat_x_verifycode" type="text"
-                       value="">
-                <input id="koala_wechat_x_verifybtn" class="koala_wechat_x_verifybtn" postid="$id" name="" type="button" value="提交">
-            </form>
         </div>
         <div class="koala_wechat_x_wxpic" style="background-image:url('$qrcode');background-size:100% 100%;">
         </div>
     </div>
+    <form method="post" style="margin:10px 0;">
+        <span class="koala_wechat_x_yzts" style="font-size:18px;float:left;">验证码：</span>
+        <input class="koala_wechat_x_verifycode" name="verifycode" id="koala_wechat_x_verifycode" type="text"
+                value="">
+        <input id="koala_wechat_x_verifybtn" class="koala_wechat_x_verifybtn" postid="$id" name="" type="button" value="提交">
+    </form>
 </div>
 HTML;
 			for ( $i = 0; $i < count( $hide_words[0] ); $i ++ ) {
