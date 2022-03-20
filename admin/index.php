@@ -9,3 +9,5 @@ require_once "controller/PostController.php";
 require_once "action/lifeCycleAction.php";
 
 require_once "action/otherAction.php";
+
+ob_clean(); 
