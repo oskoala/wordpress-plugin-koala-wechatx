@@ -45,8 +45,6 @@ add_action( 'wp_enqueue_scripts', 'koala_wechat_x_load_resources' );
 //文章加密
 add_filter( 'the_content', 'koala_wechat_x_article_encryption' );
 
-//add_action( 'print_footer_scripts', 'koala_wechat_x_script' );
-
 
 add_action( 'wp_head', 'koala_wechat_x_add_stylesheet_to_head' );
 
