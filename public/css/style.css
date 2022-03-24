@@ -1,76 +1,225 @@
-.koala_wechat_x_huoduan_hide_box {
+.koala-wechat-x-hidden-area {
+    padding-left: 10px;
+    padding-right: 10px;
     border: 1px dashed #707070;
-    border-radius: 9px;
-    padding: 10px;
-    padding-left: 50px;
-    padding-right: 50px;
-    margin: 10px 0;
-    line-height: 200%;
-    color: #707070;
-    background-color: #ffffff;
-    overflow: hidden;
-    clear: both;
-}
-.koala_wechat_x_huoduan_hide_tip{
-    font-size: 14px;
-    font-weight: normal;
-    font-stretch: normal;
-    line-height: 19px;
-    letter-spacing: 0px;
-    color: #707070;
-    padding-top: 20px;
-    padding-bottom: 20px;
-}
-.koala_wechat_x_huoduan_hide_tip span{
-    color: #faad14;
-}
-.koala_wechat_x_wxpic {
-    width: 110px;
-    height: 110px;
-    margin-left: 20px;
-    display: inline;
-    border: none
 }
 
-.koala_wechat_x_verifycode {
-    border: none;
-    float: left;
-    width: 224px !important;
-    height: 30px;
-    line-height: 30px;
-    padding: 0 5px;
-    border: 1px solid #faad14;
-    -moz-border-radius: 0px;
-    -webkit-border-radius: 0px;
-    border-radius: 0px;
-}
-
-.koala_wechat_x_verifybtn {
-    border: none !important;
-    float: left !important;
-    width: 80px !important;
-    height: 32px !important;
-    line-height: 32px !important;
-    padding: 0 5px !important;
-    background-color: #faad14 !important;
-    text-align: center !important;
-    cursor: pointer !important;
-    color: #FFF !important;
-    -moz-border-radius: 0px !important;
-    font-size: 14px !important;
-    -webkit-border-radius: 0px !important;
-    border-radius: 0px !important;
-}
-
-.koala_wechat_x_hiddenTips{
+/*隐藏提示框*/
+.koala-wechat-x-hidden-box {
+    width: 100%;
+    box-sizing: border-box;
     border: 1px dashed #707070;
-    border-radius: 9px;
-    padding: 10px;
-    margin: 10px 0;
     text-align: center;
-    line-height: 200%;
-    background-color: #ffffff;
-    overflow: hidden;
-    clear: both;
+
+    padding-bottom: 20px;
+    padding-top: 17px;
+    padding-left: 20px;
+    padding-right: 20px;
+
+    font-family: Microsoft YaHei;
     color: #999999;
+    font-size: 16px;
+
+    margin-top: 15px;
+    margin-bottom: 15px;
+}
+
+.koala-wechat-x-button-box {
+    margin-top: 23px;
+}
+
+.koala-wechat-x-button-box input {
+    padding: unset;
+    border: unset;
+    width: 200px;
+    height: 40px;
+    background-color: #faad14;
+
+    color: #ffffff;
+    font-size: 16px;
+    text-align: center;
+}
+
+@media screen and (max-width: 767px) {
+    .koala-wechat-x-button-box input {
+    }
+}
+
+/*模态框*/
+
+.koala-wechat-x-modal-overlay {
+    position: fixed; /* 使用绝对定位或固定定位  */
+    left: 0;
+    top: 0;
+    width: 100vw;
+    height: 100vh;
+    text-align: center;
+    z-index: 1000;
+    background-color: #333;
+    opacity: 0.5; /* 背景半透明 */
+}
+
+.koala-wechat-x-modal {
+    width: 660px;
+    height: 521px;
+    position: fixed; /* 使用绝对定位或固定定位  */
+    left: calc((100% - (660px + 15px * 2 + 2px)) * 0.5);
+    top: calc((100% - 545px) * 0.3);
+
+    margin: 0 auto;
+    padding-top: 34px;
+    text-align: center;
+    z-index: 1001;
+
+    background-color: #ffffff;
+    border-radius: 4px;
+    box-sizing: content-box;
+
+}
+
+.koala-wechat-x-modal div, .koala-wechat-x-modal span, .koala-wechat-x-modal, .koala-wechat-x-modal img {
+    line-height: 1.1 !important;
+}
+
+@media screen and (max-width: 767px) {
+    .koala-wechat-x-modal {
+        height: 546px;
+        width: 80%;
+        left: 10%;
+        top: calc((100% - 545px) * 0.3);
+    }
+}
+
+/*模态框内容*/
+.koala-wechat-x-modal-title {
+    width: 220px;
+    height: 26px;
+    font-family: Microsoft YaHei;
+    color: #333333;
+    font-size: 20px;
+    line-height: 24px;
+    text-align: center;
+}
+
+.koala-wechat-x-modal-content {
+    padding-top: 21px;
+    text-align: center;
+}
+
+.koala-wechat-x-modal-content .koala-wechat-x-qrcode {
+    width: 232px;
+    height: 232px;
+    background-image: url("../img/qrcode.jpg");
+    background-size: 100% 100%;
+    margin: 0 auto;
+}
+
+.koala-wechat-x-modal-content .koala-wechat-x-tips {
+    width: 350px;
+    height: 19px;
+    font-family: Microsoft YaHei;
+    color: #999999;
+    font-size: 14px;
+    line-height: 24px;
+    text-align: center;
+}
+
+.koala-wechat-x-modal-content .koala-wechat-x-tips span {
+    color: rgba(51, 51, 51, 1)
+}
+
+.koala-wechat-x-modal-content .koala-wechat-x-code-input {
+    margin-top: 42px;
+}
+
+.koala-wechat-x-modal-content .koala-wechat-x-code-input .koala-wechat-x-code-input-tips span {
+    width: 96px;
+    height: 21px;
+    font-family: Microsoft YaHei;
+    color: #333333;
+    font-size: 16px;
+    line-height: 24px;
+    text-align: center;
+}
+
+.koala-wechat-x-modal-content .koala-wechat-x-code-input .koala-wechat-x-code-input-content {
+    position: relative;
+    text-align: center;
+    margin-top: 35px;
+}
+
+.koala-wechat-x-modal-content .koala-wechat-x-code-input .koala-wechat-x-code-input-content input {
+    position: absolute;
+    top: 0;
+    width: 550px;
+    left: calc((100% - 498px) * 0.5);
+    outline: none;
+    border: none;
+    font-family: Microsoft YaHei;
+    color: #333333;
+    font-size: 42px;
+    line-height: 52px;
+    letter-spacing: 64px;
+    padding: unset;
+}
+
+@media screen and (max-width: 767px) {
+    .koala-wechat-x-modal-content .koala-wechat-x-code-input .koala-wechat-x-code-input-content input {
+        width: 220px;
+        left: calc((100% - 200px) * 0.5);
+        font-size: 30px;
+        letter-spacing: 18px;
+        padding-left: 0px;
+    }
+}
+
+.koala-wechat-x-modal-content .koala-wechat-x-code-input .koala-wechat-x-code-input-content span {
+    display: inline-block;
+    width: 59px;
+    height: 55px;
+    margin-right: 24px;
+    border-bottom: 1px solid #d9d9d9;
+    font-size: 16px;
+    color: #666;
+}
+
+@media screen and (max-width: 767px) {
+    .koala-wechat-x-modal-content .koala-wechat-x-code-input .koala-wechat-x-code-input-content span {
+        display: inline-block;
+        width: 25px;
+        height: 55px;
+        margin-right: 6px;
+        border-bottom: 1px solid #d9d9d9;
+        font-size: 16px;
+        color: #666;
+    }
+}
+
+
+.koala-wechat-x-modal-content .koala-wechat-x-status {
+    text-align: center;
+    margin-top: 19px;
+    margin-bottom: 8px;
+    display: none;
+}
+
+.koala-wechat-x-modal-content .koala-wechat-x-status img {
+    vertical-align: middle;
+}
+
+.koala-wechat-x-modal-content .koala-wechat-x-status span {
+    vertical-align: baseline;
+    width: 56px;
+    height: 19px;
+    font-family: Microsoft YaHei;
+    font-size: 14px;
+    line-height: 24px;
+}
+
+.koala-wechat-x-modal-content .koala-wechat-x-status-right span {
+    color: #52c41a;
+}
+
+.koala-wechat-x-modal-content .koala-wechat-x-status-wrong span {
+    color: #f5222d;
 }

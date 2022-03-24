@@ -8,7 +8,7 @@ function koala_wechat_x_register_activation_hook() {
 	add_option( koala_wechat_x_official_account_keyword, '' );
 	add_option( koala_wechat_x_official_account_code, '' );
 	add_option( koala_wechat_x_official_account_img, '' );
-	add_option( koala_wechat_x_hidden_area_tips, '内容已隐藏，请在文末输入验证码后查看隐藏内容' );
+	add_option( koala_wechat_x_hidden_area_tips, '内容已隐藏，请关注公众号输入验证码后查看隐藏内容' );
 	add_option( koala_wechat_x_hidden_area_tips_color, '#999999' );
 	add_option( koala_wechat_x_hidden_area_tips_border_radius, '9px' );
 

@@ -34,8 +34,8 @@ function koala_wechat_x_load_resources() {
 //	wp_enqueue_style( 'bootstrap' );
 //
 //
-//	wp_register_script( 'disable', plugins_url( 'public/js/disable.js', __FILE__ ) );
-//	wp_enqueue_script( 'disable' );
+	wp_register_script( 'index', plugins_url( 'public/js/index.js', __FILE__ ) );
+	wp_enqueue_script( 'index' );
 }
 
 
@@ -45,7 +45,7 @@ add_action( 'wp_enqueue_scripts', 'koala_wechat_x_load_resources' );
 //文章加密
 add_filter( 'the_content', 'koala_wechat_x_article_encryption' );
 
-add_action( 'print_footer_scripts', 'koala_wechat_x_script' );
+//add_action( 'print_footer_scripts', 'koala_wechat_x_script' );
 
 
 add_action( 'wp_head', 'koala_wechat_x_add_stylesheet_to_head' );
