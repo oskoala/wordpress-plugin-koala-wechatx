@@ -75,12 +75,12 @@ function koala_wechat_x_article_encryption($content)
         </div>
 
         <div class="koala-wechat-x-status koala-wechat-x-status-right">
-            <img src="$plugins_url/public/img/right.png" alt="" width="22" height="22">
+            <div style="width: 22px;height: 22px;background-image: url('$plugins_url/public/img/right.png');background-size: 100% 100%"></div>
             <span>验证通过</span>
         </div>
 
         <div class="koala-wechat-x-status koala-wechat-x-status-wrong">
-            <img src="$plugins_url/public/img/wrong.png" alt="" width="22" height="22">
+            <div style="width: 22px;height: 22px;background-image: url('$plugins_url/public/img/wrong.png');background-size: 100% 100%"></div>
             <span>验证码错误，请重新输入</span>
         </div>
 

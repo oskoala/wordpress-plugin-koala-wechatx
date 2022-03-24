@@ -203,8 +203,9 @@
     display: none;
 }
 
-.koala-wechat-x-modal-content .koala-wechat-x-status img {
+.koala-wechat-x-modal-content .koala-wechat-x-status div {
     vertical-align: middle;
+    display: inline-block;
 }
 
 .koala-wechat-x-modal-content .koala-wechat-x-status span {
