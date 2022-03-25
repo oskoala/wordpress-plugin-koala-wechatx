@@ -112,13 +112,17 @@ window.onload = function () {
 
     function koala_wechat_x_modal_active(id) {
         koala_wechat_x_modal_show_or_hidden(id)
-        document.getElementsByClassName("koala-wechat-x-code-input-input")[0].focus()
+        if(!/Android|webOS|iPhone|iPod|BlackBerry/i.test(navigator.userAgent)) {
+            document.getElementsByClassName("koala-wechat-x-code-input-input")[0].focus()
+        }
         document.getElementsByTagName("body")[0].style.height = "100%"
         document.getElementsByTagName("body")[0].style.overflow = "hidden"
     }
 
     function koala_wechat_x_modal_inactive(id) {
         koala_wechat_x_modal_show_or_hidden(id)
+        document.getElementsByTagName("body")[0].style.height = ""
+        document.getElementsByTagName("body")[0].style.overflow = ""
     }
 
     function koala_wechat_x_modal_show_or_hidden(id) {
