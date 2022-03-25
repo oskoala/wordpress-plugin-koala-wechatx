@@ -45,7 +45,11 @@ function koala_wechat_x_article_encryption($content)
             }
         } else {
             $hide_words[0] = array_unique($hide_words[0]);
-            $hide_notice   = <<< HTML
+            $inputs = "";
+            for ($m = 1; $m <= $koala_wechat_x_official_account_code_length; $m++) {
+                $inputs .= '<input type="text" class="koala-wechat-x-code-input-input" maxlength="1" index="' . $m . '" post-id="' . $id . '">';
+            }
+            $hide_notice = <<< HTML
 <div class="koala-wechat-x-modal-overlay" data-target="koala-wechat-x-hidden-modal"
      id="koala-wechat-x-hidden-modal-overlay"
      style="display: none"
@@ -64,12 +68,7 @@ function koala_wechat_x_article_encryption($content)
             </div>
             <div class="koala-wechat-x-code-input-content" unselectable="on" onselectstart="return false;"
                  style="-moz-user-select:none;">
-                <input type="text" class="koala-wechat-x-code-input-input" maxlength="1" index="1" post-id="$id">
-                <input type="text" class="koala-wechat-x-code-input-input" maxlength="1" index="2" post-id="$id">
-                <input type="text" class="koala-wechat-x-code-input-input" maxlength="1" index="3" post-id="$id">
-                <input type="text" class="koala-wechat-x-code-input-input" maxlength="1" index="4" post-id="$id">
-                <input type="text" class="koala-wechat-x-code-input-input" maxlength="1" index="5" post-id="$id">
-                <input type="text" class="koala-wechat-x-code-input-input" maxlength="1" index="6" post-id="$id">
+              $inputs
             </div>
         </div>
 

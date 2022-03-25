@@ -21,9 +21,9 @@ function koala_wechat_x_setting_save()
         if (sanitize_text_field($_POST[koala_wechat_x_official_account_keyword])) {
             update_option(koala_wechat_x_official_account_keyword, sanitize_text_field($_POST[koala_wechat_x_official_account_keyword]));
         }
-        if (strlen(sanitize_text_field($_POST[koala_wechat_x_official_account_code])) != 6) {
+        if (strlen(sanitize_text_field($_POST[koala_wechat_x_official_account_code])) > 6) {
             $updated = false;
-            $msg     = "自动回复的验证码必须是六位哦";
+            $msg     = "自动回复的验证码不能多于六位哦";
         } else if (sanitize_text_field($_POST[koala_wechat_x_official_account_code])) {
             update_option(koala_wechat_x_official_account_code, sanitize_text_field($_POST[koala_wechat_x_official_account_code]));
         }
@@ -87,7 +87,6 @@ function koala_wechat_x_setting_page()
                     </th>
                     <td>
                         <input name="<?php echo koala_wechat_x_official_account_code ?>" type="text"
-                               minlength="6"
                                maxlength="6"
                                id="<?php echo koala_wechat_x_official_account_code ?>"
                                value="<?php echo get_option(koala_wechat_x_official_account_code) ?>"
