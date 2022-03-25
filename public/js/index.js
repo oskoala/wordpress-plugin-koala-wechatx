@@ -22,13 +22,26 @@ window.onload = function () {
             koala_wechat_x_modal_inactive(data_target_model_id)
         }
     }
-    if (document.getElementsByClassName("koala-wechat-x-code-input-input").length)
-        document.getElementsByClassName("koala-wechat-x-code-input-input")[0].oninput = function (e) {
+
+    let code_input_arr = document.getElementsByClassName("koala-wechat-x-code-input-input");
+    for (let index = 0; index < code_input_arr.length; index++) {
+        code_input_arr[index].onkeyup = function (e) {
             let that = this
-            let code_length = parseInt(that.getAttribute("code-length"))
-            if (that.value.length === code_length) {
-                that.blur();
-                console.log("放弃焦点")
+            if (e.key === "Backspace" && index !== 0) {
+                that.value = ""
+                that.blur()
+                code_input_arr[index - 1].focus()
+            }
+        }
+        code_input_arr[index].oninput = function () {
+            let that = this
+            if (that.value.length === 1) {
+                that.blur()
+                if (index + 1 < code_input_arr.length) {
+                    code_input_arr[index + 1].focus()
+                }
+            }
+            if (index === code_input_arr.length - 1) {
                 let post_id = that.getAttribute("post-id")
                 //$("#post-" + id + " .entry-content").html(data.data.content);
                 let xmlHttp = createXMLHttpRequest()
@@ -51,21 +64,32 @@ window.onload = function () {
                             setTimeout(function () {
                                 document.getElementsByClassName("koala-wechat-x-status-right")[0].style.display = "none"
                                 document.getElementsByClassName("koala-wechat-x-status-wrong")[0].style.display = "block"
-                                that.value = ""
-                                that.focus();
+                                setTimeout(function () {
+                                    for (let j = 0; j < code_input_arr.length; j++) {
+                                        code_input_arr[j].value = ""
+                                    }
+                                    code_input_arr[0].focus();
+                                }, 200)
                             }, 100)
                         }
                     }
                 };
                 xmlHttp.setRequestHeader("Content-Type",
                     "application/x-www-form-urlencoded;");
-                let res = xmlHttp.send('id=' + post_id + '&verifycode=' + that.value);
-            }
-            if (this.value.length > code_length) {
-                this.blur();
-                return false
+                let code = getCode()
+                xmlHttp.send('id=' + post_id + '&verifycode=' + code);
             }
         }
+    }
+
+    function getCode() {
+        let code = "";
+        let code_input_arr = document.getElementsByClassName("koala-wechat-x-code-input-input");
+        for (let index = 0; index < code_input_arr.length; index++) {
+            code += code_input_arr[index].value
+        }
+        return code;
+    }
 
     function createXMLHttpRequest() {
         var xmlHttp;

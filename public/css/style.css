@@ -123,7 +123,7 @@
     font-family: Microsoft YaHei;
     color: #999999;
     font-size: 14px;
-    line-height: 24px;
+    line-height: 24px !important;
     text-align: center;
 }
 
@@ -152,49 +152,24 @@
 }
 
 .koala-wechat-x-modal-content .koala-wechat-x-code-input .koala-wechat-x-code-input-content input {
-    position: absolute;
-    top: 0;
-    width: 550px;
-    left: calc((100% - 498px) * 0.5);
+    width: 59px;
     outline: none;
     border: none;
     font-family: Microsoft YaHei;
     color: #333333;
     font-size: 42px;
     line-height: 52px;
-    letter-spacing: 64px;
     padding: unset;
+    border-bottom: 1px solid #d9d9d9;
+    text-align: center;
 }
 
 @media screen and (max-width: 767px) {
     .koala-wechat-x-modal-content .koala-wechat-x-code-input .koala-wechat-x-code-input-content input {
-        width: 220px !important;
+        width: 30px !important;
         left: calc((100% - 200px) * 0.5) !important;;
         font-size: 30px !important;
-        letter-spacing: 17px !important;
         padding-left: 0px !important;
-    }
-}
-
-.koala-wechat-x-modal-content .koala-wechat-x-code-input .koala-wechat-x-code-input-content span {
-    display: inline-block;
-    width: 59px;
-    height: 55px;
-    margin-right: 24.8px;
-    border-bottom: 1px solid #d9d9d9;
-    font-size: 16px;
-    color: #666;
-}
-
-@media screen and (max-width: 767px) {
-    .koala-wechat-x-modal-content .koala-wechat-x-code-input .koala-wechat-x-code-input-content span {
-        display: inline-block !important;
-        width: 25px !important;
-        height: 55px !important;
-        margin-right: 3px !important;
-        border-bottom: 1px solid #d9d9d9 !important;
-        font-size: 16px !important;
-        color: #666 !important;
     }
 }
 
