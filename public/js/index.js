@@ -89,6 +89,8 @@ window.onload = function () {
     function koala_wechat_x_modal_active(id) {
         koala_wechat_x_modal_show_or_hidden(id)
         document.getElementsByClassName("koala-wechat-x-code-input-input")[0].focus()
+        document.getElementsByTagName("body")[0].style.height = "100%"
+        document.getElementsByTagName("body")[0].style.overflow = "hidden"
     }
 
     function koala_wechat_x_modal_inactive(id) {

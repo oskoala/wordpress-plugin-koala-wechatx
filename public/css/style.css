@@ -85,8 +85,11 @@
     .koala-wechat-x-modal {
         height: 546px;
         width: 80%;
-        left: 10%;
+        left: calc((10% - 15px));
         top: calc((100% - 545px) * 0.3);
+
+        padding-left: 15px;
+        padding-right: 15px;
     }
 }
 
@@ -125,7 +128,7 @@
 }
 
 .koala-wechat-x-modal-content .koala-wechat-x-tips span {
-    color: rgba(51, 51, 51, 1)
+    color: rgba(51, 51, 51, 1);
 }
 
 .koala-wechat-x-modal-content .koala-wechat-x-code-input {
@@ -138,7 +141,7 @@
     font-family: Microsoft YaHei;
     color: #333333;
     font-size: 16px;
-    line-height: 24px;
+    line-height: 24px !important;
     text-align: center;
 }
 
@@ -165,11 +168,11 @@
 
 @media screen and (max-width: 767px) {
     .koala-wechat-x-modal-content .koala-wechat-x-code-input .koala-wechat-x-code-input-content input {
-        width: 220px;
-        left: calc((100% - 200px) * 0.5);
-        font-size: 30px;
-        letter-spacing: 18px;
-        padding-left: 0px;
+        width: 220px !important;
+        left: calc((100% - 200px) * 0.5) !important;;
+        font-size: 30px !important;
+        letter-spacing: 17px !important;
+        padding-left: 0px !important;
     }
 }
 
@@ -177,7 +180,7 @@
     display: inline-block;
     width: 59px;
     height: 55px;
-    margin-right: 24px;
+    margin-right: 24.8px;
     border-bottom: 1px solid #d9d9d9;
     font-size: 16px;
     color: #666;
@@ -185,13 +188,13 @@
 
 @media screen and (max-width: 767px) {
     .koala-wechat-x-modal-content .koala-wechat-x-code-input .koala-wechat-x-code-input-content span {
-        display: inline-block;
-        width: 25px;
-        height: 55px;
-        margin-right: 6px;
-        border-bottom: 1px solid #d9d9d9;
-        font-size: 16px;
-        color: #666;
+        display: inline-block !important;
+        width: 25px !important;
+        height: 55px !important;
+        margin-right: 3px !important;
+        border-bottom: 1px solid #d9d9d9 !important;
+        font-size: 16px !important;
+        color: #666 !important;
     }
 }
 
